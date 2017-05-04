@@ -1,0 +1,41 @@
+For HTTP_SampleA.pcap:
+
+tcp0:
+throughput: 1797
+goodput: 999
+avg RTT: 0.202904
+initial cwnd size: 4380
+tcp1:
+throughput: 2266
+goodput: 999
+avg RTT: 0.358670
+initial cwnd size: 4380
+tcp2:
+throughput: 1101
+goodput: 501
+avg RTT: 0.202858
+initial cwnd size: 4380
+tcp3:
+throughput: 1101
+goodput: 501
+avg RTT: 0.202860
+initial cwnd size: 4380
+tcp4:
+throughput: 1101
+goodput: 501
+avg RTT: 0.202859
+initial cwnd size: 4380
+tcp5:
+throughput: 1101
+goodput: 501
+avg RTT: 0.202020
+initial cwnd size: 4380
+
+
+For HTTP_SampleB.pcap:
+
+tcp0:
+throughput: 5802
+goodput: 3618
+avg RTT: 0.202268
+initial cwnd size: 4380

@@ -1,0 +1,141 @@
+#########Trial at Tue Feb 16 23:21:30 2016##########
+
+>>> python mydig.py www.cs.stonybrook.edu A
+
+QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.cs.stonybrook.edu. IN A
+
+;; ANSWER SECTION:
+www.cs.stonybrook.edu. 28800 IN A 130.245.27.2
+
+;; Query time: 105 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:21:30 2016
+
+
+
+
+#########Trial at Tue Feb 16 23:21:45 2016##########
+
+>>> python mydig.py www.youtube.com A
+
+QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.youtube.com. IN A
+
+;; ANSWER SECTION:
+www.youtube.com. 86400 IN CNAME youtube-ui.l.google.com.
+youtube-ui.l.google.com. 300 IN A 74.125.226.71
+youtube-ui.l.google.com. 300 IN A 74.125.226.70
+youtube-ui.l.google.com. 300 IN A 74.125.226.69
+youtube-ui.l.google.com. 300 IN A 74.125.226.65
+youtube-ui.l.google.com. 300 IN A 74.125.226.64
+youtube-ui.l.google.com. 300 IN A 74.125.226.68
+youtube-ui.l.google.com. 300 IN A 74.125.226.73
+youtube-ui.l.google.com. 300 IN A 74.125.226.66
+youtube-ui.l.google.com. 300 IN A 74.125.226.67
+youtube-ui.l.google.com. 300 IN A 74.125.226.72
+youtube-ui.l.google.com. 300 IN A 74.125.226.78
+
+;; Query time: 133 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:21:45 2016
+
+
+
+
+#########Trial at Tue Feb 16 23:21:55 2016##########
+
+>>> python mydig.py edu NS
+
+QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;edu. IN NS
+
+;; ANSWER SECTION:
+edu. 172800 IN NS d.edu-servers.net.
+edu. 172800 IN NS g.edu-servers.net.
+edu. 172800 IN NS l.edu-servers.net.
+edu. 172800 IN NS a.edu-servers.net.
+edu. 172800 IN NS f.edu-servers.net.
+edu. 172800 IN NS c.edu-servers.net.
+
+;; Query time: 48 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:21:55 2016
+
+
+
+
+#########Trial at Tue Feb 16 23:22:01 2016##########
+
+>>> python mydig.py google.com NS
+
+QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;google.com. IN NS
+
+;; ANSWER SECTION:
+google.com. 345600 IN NS ns3.google.com.
+google.com. 345600 IN NS ns2.google.com.
+google.com. 345600 IN NS ns1.google.com.
+google.com. 345600 IN NS ns4.google.com.
+
+;; Query time: 126 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:22:01 2016
+
+
+
+
+#########Trial at Tue Feb 16 23:22:12 2016##########
+
+>>> python mydig.py cs.stonybrook.edu MX
+
+QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;cs.stonybrook.edu. IN MX
+
+;; ANSWER SECTION:
+cs.stonybrook.edu. 28800 IN MX 5 ALT1.ASPMX.L.GOOGLE.COM.
+cs.stonybrook.edu. 28800 IN MX 2 ASPMX.L.GOOGLE.COM.
+cs.stonybrook.edu. 28800 IN MX 10 ASPMX3.GOOGLEMAIL.COM.
+cs.stonybrook.edu. 28800 IN MX 10 ASPMX2.GOOGLEMAIL.COM.
+cs.stonybrook.edu. 28800 IN MX 5 ALT2.ASPMX.L.GOOGLE.COM.
+
+;; Query time: 155 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:22:12 2016
+
+
+
+
+#########Trial at Tue Feb 16 23:23:07 2016##########
+
+>>> python mydig.py google.com MX
+
+QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;google.com. IN MX
+
+;; ANSWER SECTION:
+google.com. 600 IN MX 10 aspmx.l.google.com.
+google.com. 600 IN MX 20 alt1.aspmx.l.google.com.
+google.com. 600 IN MX 50 alt4.aspmx.l.google.com.
+google.com. 600 IN MX 40 alt3.aspmx.l.google.com.
+google.com. 600 IN MX 30 alt2.aspmx.l.google.com.
+
+;; Query time: 210 msec
+;; SERVER: 192.168.1.15
+;; WHEN: Tue Feb 16 23:23:07 2016
+
+
+
+

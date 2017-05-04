@@ -1,0 +1,72 @@
+README File for homework 1 of Networks
+Yunke Tian   109929662     yunke.tian@stonybrook.edu
+
+1. OVERVIEW
+	In the root folder are these files:
+		myRes.py: the main part of implementing the resolver function; the base for "mydnsresolver" tool and "mydig" tool
+		mydnsresolver.py: the .py file for Part A
+		mydig.py: the .py file for Part B
+		performance.py: the .py file for Part C
+		mydig_output.txt: the automatically generated .txt file recording all the history outputs from "mydig.py"
+		CDF_Plot.png: the automatically generated .png file of the CDF graph for 3 resolvers
+		Answer_PartC&D.pdf: the text file answering questions of Part C and Part D
+		README: this documentation file
+
+2. LIBRARIES USED
+	Besides the "dnspython3" (used with python3.5) lib, I also used "numpy" and "matplotlib.pyplot" libs for drawing CDF
+	I also used system modules:"socket" for getting local host name, "sys" for operating files, and "time" to measure query time
+
+3. HOW TO RUN
+	First make sure that libs in Section(2) are satisfied, and python3.5 version.
+
+	Then, For Part A: enter the root folder and type: python mydnsresolver.py QUERYNAME
+	Example: >>> python mydonsresolver.py www.youtube.com
+			www.youtube.com. 86400 IN CNAME youtube-ui.l.google.com.
+			youtube-ui.l.google.com. 300 IN A 74.125.226.65
+			youtube-ui.l.google.com. 300 IN A 74.125.226.64
+			youtube-ui.l.google.com. 300 IN A 74.125.226.66
+			youtube-ui.l.google.com. 300 IN A 74.125.226.78
+			youtube-ui.l.google.com. 300 IN A 74.125.226.72
+			youtube-ui.l.google.com. 300 IN A 74.125.226.73
+			youtube-ui.l.google.com. 300 IN A 74.125.226.69
+			youtube-ui.l.google.com. 300 IN A 74.125.226.67
+			youtube-ui.l.google.com. 300 IN A 74.125.226.68
+			youtube-ui.l.google.com. 300 IN A 74.125.226.70
+			youtube-ui.l.google.com. 300 IN A 74.125.226.71
+			The ip address:
+			74.125.226.65
+			74.125.226.64
+			74.125.226.66
+			74.125.226.78
+			74.125.226.72
+			74.125.226.73
+			74.125.226.69
+			74.125.226.67
+			74.125.226.68
+			74.125.226.70
+			74.125.226.71
+
+	For Part B: in root folder and type: python mydig.py QUERYNAME TYPE
+	Example: >>> python mydig.py www.cs.stonybrook.edu A
+			QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+			;; QUESTION SECTION:
+			;www.cs.stonybrook.edu. IN A
+
+			;; ANSWER SECTION:
+			www.cs.stonybrook.edu. 28800 IN A 130.245.27.2
+
+			;; Query time: 105 msec
+			;; SERVER: 192.168.1.15
+			;; WHEN: Tue Feb 16 22:51:24 2016
+	Try with 3 different types, and all the results will go into "mydig_output.txt" file
+
+	For Part C: in root folder and type: python performance.py, and you can see the running process, and finally get a CDF graph. Also the image file will be generated.
+
+	If any problem happens, please see the next Section of Notes. If still not solved, please contact me (yunke.tian@stonybrook.edu)
+
+4. NOTES
+	a. Very important. For some queries (especially websites out of U.S.), my DNS resolver has a small chance of getting stuck forever (maybe due to my algorithm). In this case, just retry.
+	b. For a very small set of websites, my resolver returns exception: No route, Answer. No idea why.
+	c. Due to (a) and (b) , in Part C I changed some websites in the 25 websites.
+	d. Important! Due to (a) and (b), and with slow network, in Part C (python performance.py), when using my DNS resolver, there's probability of 50% that my resolver will get stuck. In this case, please be patient and retry several times. If still not work, open the "performance.py" and reset the "myRunTime" variable from 10 to 5 or smaller.

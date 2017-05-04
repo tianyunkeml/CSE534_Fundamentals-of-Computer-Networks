@@ -1,0 +1,28 @@
+Yunke Tian
+109929662
+yunke.tian@stonybrook.edu
+
+
+PartA:
+(1) answer is in the output of 'python partA.py http_first_sample.pcap', and also in the 'output1.txt' file
+(2) three transactions after handshake are:
+ Client   -------->   Server   ACK       (Seq = 951057940, ack = 290218380, window size = 9660    ) 
+ Client   -------->   Server   ACK PSH   (Seq = 951057940, ack = 290218380, window size = 9660    ) HTTP: GET
+ Client   <--------   Server   ACK       (Seq = 290218380, ack = 951058419, window size = 6432    ) 
+
+explaination:
+for the first: seq and ack should be the same as the 3rd handshake
+for the second: it's a retransmission, so seq and ack remain the same
+for the third: server got the packet and send an ACK, so seq equals the last ack, and ack equals last seq + packet size
+all make sense
+
+
+PartB:
+(1) sampleA is HTTP parallelization, because 6 tcp connections are running at the same time; sampleB is probably HTTP 2.0 or HTTP persistent, i'm not sure...
+(2) answer is in the output of 'python partB.py', and also in the 'output2.txt' file
+
+
+PartC:
+(1) the 21 CWND data (including the initial CWND) are in the 'output3.txt' file, and the plot in the 'CWND.png'
+(2) answer in the 'output3.txt' file.
+
